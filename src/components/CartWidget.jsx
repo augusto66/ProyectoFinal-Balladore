@@ -13,6 +13,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
+
 export default function CartWidged() {
   return (
     <IconButton aria-label="cart">

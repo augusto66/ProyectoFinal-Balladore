@@ -8,7 +8,7 @@ function Itemlist({ items }) {
         <Container>
             <Row xs={1} md={2} className="g-4">
                 {items.map(item => (
-                 <Item item={item} key={item.id} /> 
+                    <Item item={item} key={item.id} />
                 ))}
             </Row>
         </Container>

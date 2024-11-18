@@ -35,6 +35,7 @@ function ItemCount({ initialQuantity = 1, min = 1, max = 10, onQuantityChange })
             backgroundColor: "#f8f9fa",
         }}
         >
+
             <InputGroup style={{ maxWidth: "200px" }}>
                 <Button
                     variant="outline-primary"

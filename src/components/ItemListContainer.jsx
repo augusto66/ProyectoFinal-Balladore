@@ -13,7 +13,6 @@ function ItemListContainer() {
         const parsed = await res.json()
         setItems(parsed.products)
     }
-
     useEffect(() => {
         //getProducts()
         fetch(id ? categoryProducts : allProducts)
