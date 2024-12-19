@@ -1,29 +1,17 @@
-import { useState, useEffect } from 'react'
-import ItemList from './ItemList'
-import { useParams } from 'react-router-dom'
+import { useState, useEffect, useContext } from "react";
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import { getProducts, getFilterProducts } from "../firebase/db";
 
 function ItemListContainer() {
-    const [items, setItems] = useState([])
-    const { id } = useParams()
-    const allProducts = 'https://dummyjson.com/products/category/mens-watches'
-    const categoryProducts = `https://dummyjson.com/products/category/${id}`
+  const [items, setItems] = useState([]);
+  const { id } = useParams();
 
-    const getProducts = async () => {
-        const res = await fetch('https://dummyjson.com/products')
-        const parsed = await res.json()
-        setItems(parsed.products)
-    }
-    useEffect(() => {
-        //getProducts()
-        fetch(id ? categoryProducts : allProducts)
-            .then(res => res.json())
-            .then(res => setItems(res.products))
-    }, [id, categoryProducts])
+  useEffect(() => {
+    id ? getFilterProducts(id, setItems) : getProducts(setItems);
+  }, [id]);
 
-    return (
-        <ItemList items={items} />
-
-    )
+  return <ItemList items={items} />;
 }
 
-export default ItemListContainer
+export default ItemListContainer;
