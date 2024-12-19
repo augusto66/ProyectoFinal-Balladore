@@ -49,6 +49,7 @@ CourtMaster/
 │   ├── components/                # Componentes reutilizables
 │   │   ├── Cart.jsx               # Vista del carrito de compras
 │   │   ├── CartWidget.jsx         # Icono del carrito con contador
+│   │   ├── CheckoutForm.jsx       # Formulario con datos del comprador    
 │   │   ├── Item.jsx               # Componente para un producto individual
 │   │   ├── ItemCount.jsx          # Selector de cantidad de productos
 │   │   ├── ItemDetail.jsx         # Detalle de un producto
