@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cartContext } from "./cartContext";
+import { CartContext } from "./CartContext";
 
 export default function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
@@ -33,10 +33,10 @@ export default function CartProvider({ children }) {
   };
 
   return (
-    <cartContext.Provider
+    <CartContext.Provider
       value={{ cart, addToCart, getQuantity, removeFromCart, getTotal }}
     >
       {children}
-    </cartContext.Provider>
+    </CartContext.Provider>
   );
 }

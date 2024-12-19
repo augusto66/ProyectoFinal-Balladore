@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Button, InputGroup, FormControl, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { cartContext } from "../context/cartContext";
+import { CartContext } from "../context/CartContext";
 
 function ItemCount({
   item,
@@ -12,7 +12,7 @@ function ItemCount({
     console.log("Cantidad seleccionada:", quantity),
 }) {
   const [quantity, setQuantity] = useState(initialQuantity);
-  const { addToCart } = useContext(cartContext);
+  const { addToCart } = useContext(CartContext);
 
   const handleIncrement = () => {
     if (quantity < max) {

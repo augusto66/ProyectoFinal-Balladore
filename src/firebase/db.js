@@ -1,14 +1,5 @@
 import { async } from "@firebase/util";
-import {
-  getFirestore,
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-  addDoc,
-} from "firebase/firestore";
+import {getFirestore, collection, query, where, getDocs, doc, getDoc, addDoc} from "firebase/firestore";
 import { app } from "./config";
 
 const db = getFirestore(app);

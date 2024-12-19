@@ -1,4 +1,4 @@
-import { cartContext } from "../context/cartContext";
+import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 import * as React from "react";
 import Badge from "@mui/material/Badge";
@@ -17,7 +17,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function CartWidged() {
-  const { getQuantity } = useContext(cartContext);
+  const { getQuantity } = useContext(CartContext);
 
   return (
     <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
