@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Button, InputGroup, FormControl, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/CartContext.jsx";
 
 function ItemCount({
   item,
